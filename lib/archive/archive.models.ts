@@ -1,7 +1,7 @@
 import { Rx7zActionType } from "../../index";
 
 export class CreateArchiveAction {
-    public readonly type = Rx7zActionType.Create;
+    public readonly type = Rx7zActionType.CreateArchive;
     constructor(
         public archivePath: string,
         public files: string[]

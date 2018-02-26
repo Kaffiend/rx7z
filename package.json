@@ -1,7 +1,8 @@
 {
   "name": "rx7z",
   "version": "0.0.7",
-  "description": "RxJS 7zip Archive Interface",
+  "description": "RxJS 7zip Interface",
+  "repository": "https://github.com/Kaffiend/rx7z",
   "main": "./dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {

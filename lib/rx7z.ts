@@ -23,7 +23,7 @@ export class Rx7z {
 
     private processAction(action: Rx7zActions) {
         switch (action.type) {
-            case Rx7zActionType.Create: {
+            case Rx7zActionType.CreateArchive: {
                 this.Archive.createArchive(action.archivePath, ...action.files);
             }
                 break;
@@ -35,7 +35,7 @@ export class Rx7z {
 
 export enum Rx7zActionType {
     Initialize = 'Initialize',
-    Create = 'Archive_Create',
+    CreateArchive = 'Archive_Create',
     CreateArchiveProgress = 'Archive_Create_Progress',
     CreateArchiveSuccess = 'Archive_Creation_Success',
     CreateArchiveFailure = 'Archive_Creation_Failure'
