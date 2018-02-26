@@ -1,0 +1,5 @@
+*
+!dist/**
+!package.json
+!util/install.js
+!tsconfig.json

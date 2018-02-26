@@ -1,0 +1,32 @@
+{
+  "name": "rx7z",
+  "version": "0.0.7",
+  "description": "RxJS 7zip Archive Interface",
+  "main": "./dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "test": "node build/test/test",
+    "prepublish": "npm run build",
+    "build": "rimraf dist && tsc",
+    "install": "node util/install.js"
+  },
+  "keywords": [
+    "rx",
+    "rxjs",
+    "7z",
+    "7zip"
+  ],
+  "author": "Ian Mackie",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^9.4.6",
+    "rimraf": "^2.6.2",
+    "typescript": "^2.7.2"
+  },
+  "dependencies": {
+    "decompress": "^4.2.0",
+    "node-wget": "^0.4.2",
+    "rxjs": "^5.5.6",
+    "wget-improved": "^1.5.0"
+  }
+}
