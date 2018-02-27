@@ -14,6 +14,15 @@ export class Rx7z {
 
     constructor() {
         this.Manager = new Subject<Rx7zActions>();
+        this.managerSub = this.Manager.subscribe(action => {
+            switch (action.type) {
+                case Rx7zActionType.CreateArchive: {
+                    this.processAction(action);
+                }
+                default:
+                    break;
+            }
+        })
         this.Archive = new Rx7zArchive(this.Manager);
     }
 
