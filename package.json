@@ -6,16 +6,20 @@
   "main": "./dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
-    "test": "node build/test/test",
+    "test": "node dist/test/test",
     "prepublish": "npm run build",
     "build": "rimraf dist && tsc",
     "install": "node util/install.js"
   },
   "keywords": [
     "rx",
+    "reactive",
     "rxjs",
     "7z",
-    "7zip"
+    "7zip",
+    "archive",
+    "zip",
+    "compress"
   ],
   "author": "Ian Mackie",
   "license": "MIT",

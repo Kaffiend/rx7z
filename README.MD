@@ -19,11 +19,17 @@ let files = [
     `${path.join('c:/','path','tofiles')}*.jpg`
 ];
 rx7.Manager.subscribe((action: Rx7zActions) => {
-    console.log(action);
     switch (action.type) {
         case Rx7zActionType.CreateArchiveProgress: {
             // contains the string value of percentage complete.
-            console.log(action.progress);
+            console.log(action);
+        }
+        case Rx7zActionType.CreateArchiveCurrentFile: {
+            // do something when current file changes.
+            console.log(action);
+        }
+        case Rx7zActionType.CreateArchiveError: {
+            console.log(action);
         }
         case Rx7zActionType.CreateArchiveFailure: {
             // do something if it fails.
@@ -35,6 +41,9 @@ rx7.Manager.subscribe((action: Rx7zActions) => {
             break;
     }
 })
+
+// Dispatch the action to create an archive with the files passed in.
+rx7.Archive.createArchive('./test.7z', ...files);
 
 // Dispatch the action to create an archive with the files passed in.
 rx7.dispatch(new CreateArchiveAction('output/path/to/archive.7z', files));
